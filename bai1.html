@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<label style="margin-left: 40px;">Your answer</label>
+<input type="text" id="input"></input>
+<br>
+<button id="btn" style="margin-left: 110px;margin-top: 20px; border-radius: 20%; background-color: cyan;">Answer</button>    
+</body>
+<script>
+let input = document.getElementById("input");
+let btn = document.getElementById("btn");
+let value = input.value;
+btn.addEventListener("click",function(){
+    if(value.length>10){
+        alert("Khong hop le");
+    }else{
+        alert("Hop le");
+    }
+})    
+</script>
+</html>

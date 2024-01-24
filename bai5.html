@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Create New Item</h1>
+<p>Item
+    <input type="text" id="input" style="background-color: yellow;">
+    <button id="btn">Add</button>
+</p>
+<ul id="list">
+    <li>Nho mi</li>
+    <li>Tao tau</li>
+</ul>
+</body>
+<script>
+let input = document.getElementById("input");
+let inputValue = "";
+let btn = document.getElementById("btn");
+let list = document.getElementById("list");
+
+input.addEventListener("input", function() {
+    input.style.backgroundColor = "white";
+    inputValue = input.value;
+});
+
+btn.addEventListener("click", function() {
+    let li = document.createElement("li");
+    li.textContent = inputValue;
+    list.appendChild(li);
+    input.value = ""; 
+});
+</script>
+</html>
